@@ -16,7 +16,7 @@ public:
 	Container* getContainer();
 	void setNext(Element* inNext);
 	void setPrev(Element* inPrev);
-	void setContainer(Container* inContainer);
+	bool setContainer(Container* inContainer);
 	bool input(std::istream&file);
 };
 

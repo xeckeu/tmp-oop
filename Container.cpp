@@ -1,10 +1,11 @@
 #include "Container.h"
+#include "Bird.h"
+#include "Fish.h"
 
 
 
 
-
-bool Container::In(std::ifstream & file)
+Container* Container::In(std::ifstream & file)
 {
 	Container *c;
 	char k;
@@ -12,12 +13,12 @@ bool Container::In(std::ifstream & file)
 	switch (k) {
 	case 'f':
 	{
-		c = new Fish;
+		c = new Fish();
 		break;
 	}
 	case 'b':
 	{
-		c = new Bird; 
+		c = new Bird(); 
 		break;
 	}
 		
@@ -25,10 +26,7 @@ bool Container::In(std::ifstream & file)
 		return 0;
 	}
 	c->InData(file);
-	return 1;
+	return c;
 }
 
-void Container::Out(std::ofstream & file)
-{
 
-}

@@ -39,7 +39,10 @@ void Bird::InData(std::ifstream & file)
 
 void Bird::Out(std::ofstream & file)
 {
-	file << name << " " << migratory<<"\n";
+	file << name << " ";
+	if(migratory)
+		file<< "true.\n";
+	else file << "false.\n";
 }
 
 

@@ -2,7 +2,6 @@
 #include <string>
 #include<fstream>
 #include "Container.h"
-class Container;
 class Bird : public Container
 {
 private:

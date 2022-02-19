@@ -6,11 +6,11 @@ void Fish::InData(std::ifstream & file)
 {
 	std::string cur;
 	file >> name >> cur;
-	if (cur == "Lake")
+	if (cur == "lake")
 		this->areal = habitat::Lake;
-	else if (cur == "River")
+	else if (cur == "river")
 		this->areal = habitat::River;
-	else if (cur == "Sea")
+	else if (cur == "sea")
 		this->areal = habitat::Sea;
 }
 

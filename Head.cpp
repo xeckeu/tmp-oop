@@ -49,11 +49,14 @@ void Head::Clear()
 	auto erasing = begin;
 	while (size > 0)
 	{
+		//
 		auto cur = erasing->getNext();
 		erasing->getNext()->setPrev(erasing->getPrev());
 		erasing->getPrev()->setNext(cur);
 		delete erasing;
+		erasing = cur;
 		size--;
+		
 	}
 }
 
@@ -61,13 +64,18 @@ void Head::addElement(Element * addingElem)
 {
 	if (size == 0)
 	{
-		begin = addingElem;
 		end = addingElem;
+		begin = addingElem;
+		end->setNext( begin);
+		end->setPrev(begin);
+		begin->setNext(end);
+		begin->setPrev(end);
 	}
 	else
 	{
 		end->setNext(addingElem);
-		addingElem->setPrev(end);
+		addingElem->setNext(begin);
+		addingElem->setPrev( end);
 		end = addingElem;
 		begin->setPrev(addingElem);
 	}
@@ -88,10 +96,15 @@ void Head::output(std::ofstream & file)
 
 void Head::input(std::ifstream& file)
 {
-	Element*newElement = new Element();
+	
 	while (!file.eof())
 	{
-		if (newElement->input(file) != 0)
+		Element*newElement = new Element();
+		if (newElement->setContainer( newElement->getContainer()->In(file)) !=0)
+		{
+
 			addElement(newElement);
+
+		}
 	}
 }

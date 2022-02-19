@@ -46,12 +46,18 @@ void Element::setPrev(Element * inPrev)
 	prev = inPrev;
 }
 
-void Element::setContainer(Container * inContainer)
+bool Element::setContainer(Container * inContainer)
 {
-	c = inContainer;
+	if (inContainer != 0)
+	{
+		c = inContainer;
+		return 1;
+	}
+	else return 0;
 }
 
 bool Element::input(std::istream & file)
 {
+
 	return false;
 }
