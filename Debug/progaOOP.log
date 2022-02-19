@@ -1,0 +1,30 @@
+﻿Сборка начата 18.02.2022 11:08:12.
+     1>Проект "C:\Users\user\documents\visual studio 2015\Projects\progaOOP\progaOOP\progaOOP.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Bird.cpp Client.cpp Container.cpp Element.cpp Fish.cpp Head.cpp
+         Head.cpp
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\bird.h(7): error C2504: Container: не определен базовый класс
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\fish.h(8): error C2504: Container: не определен базовый класс
+         Fish.cpp
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\bird.h(7): error C2504: Container: не определен базовый класс
+         Element.cpp
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\bird.h(7): error C2504: Container: не определен базовый класс
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\fish.h(8): error C2504: Container: не определен базовый класс
+         Container.cpp
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\bird.h(7): error C2504: Container: не определен базовый класс
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\fish.h(8): error C2504: Container: не определен базовый класс
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(15): error C2440: =: невозможно преобразовать "Fish *" в "Container *"
+         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(15): note: Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(20): error C2440: =: невозможно преобразовать "Bird *" в "Container *"
+         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(20): note: Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции
+         Client.cpp
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\bird.h(7): error C2504: Container: не определен базовый класс
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\fish.h(8): error C2504: Container: не определен базовый класс
+         Bird.cpp
+     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\fish.h(8): error C2504: Container: не определен базовый класс
+         Создание кода...
+     1>Сборка проекта "C:\Users\user\documents\visual studio 2015\Projects\progaOOP\progaOOP\progaOOP.vcxproj" завершена (целевые объекты Build) с ошибкой.
+
+Ошибка сборки.
+
+Затраченное время: 00:00:02.81
