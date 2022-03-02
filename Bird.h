@@ -7,6 +7,7 @@ class Bird : public Container
 private:
 	std::string name;
 	bool migratory;
+	int age;
 public:
 	Bird();
 	~Bird();
@@ -16,5 +17,7 @@ public:
 	bool getMigratory();
 	void InData(std::ifstream &file);
 	void Out(std::ofstream &file);
+	void setAge(int inAge);
+	int getAge();
 };
 

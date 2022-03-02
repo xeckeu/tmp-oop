@@ -12,12 +12,14 @@ public:
 	Fish();
 	~Fish();
 	void setName(std::string inName);
+	void setAge(int inAge);
+	int getAge();
 	void setAreal(habitat inAreal);
 	std::string getName();
 	habitat getAreal();
 	void Out(std::ofstream &file);
 private:
-
+	int age;
 	std::string name;
 	habitat areal;
 };
