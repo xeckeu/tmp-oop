@@ -7,6 +7,7 @@ private:
 	Element* next;
 	Element* prev;
 	Container* c;
+	int nameSize;
 public:
 	Element();
 	Element(Element* inElement);

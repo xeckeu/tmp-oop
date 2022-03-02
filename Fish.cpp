@@ -68,3 +68,8 @@ void Fish::Out(std::ofstream & file)
 		break;
 	}
 }
+
+int Fish::nameSize()
+{
+	return name.length;
+}

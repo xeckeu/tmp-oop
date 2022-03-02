@@ -16,5 +16,6 @@ public:
 	bool getMigratory();
 	void InData(std::ifstream &file);
 	void Out(std::ofstream &file);
+	int nameSize();
 };
 
