@@ -1,5 +1,5 @@
 #include "Animal.h"
-
+#include <string>
 
 
 Animal::Animal()
@@ -29,6 +29,19 @@ std::string Animal::getName()
 nutrition Animal::getEating()
 {
 	return eat;
+}
+
+void Animal::InData(std::ifstream & file)
+{
+	file >> name;
+	std::string type;
+	file >> type;
+	if (type == "predator")
+		eat = predator;
+	else if (type == "herbivore")
+		eat = herbivore;
+	else if (type == "insectivore")
+		eat = insectivore;
 }
 
 void Animal::Out(std::ofstream & file)
