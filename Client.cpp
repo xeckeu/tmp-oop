@@ -4,7 +4,7 @@
 using namespace std;
 int main(int argc, char* argv[])
 {
-	/*if (argc != 3)
+	if (argc != 3)
 	{
 		cout << "incorrect command line! "
 			"Waited: command in_file out_file"
@@ -12,9 +12,7 @@ int main(int argc, char* argv[])
 		exit(1);
 	}
 	ifstream inputFile(argv[1]);
-	ofstream outputFile(argv[2]);*/
-	ifstream inputFile("input.txt");
-	ofstream outputFile("output.txt");
+	ofstream outputFile(argv[2]);
 	cout << "Start" << endl;
 	Head* c= new Head();
 	c->input(inputFile);

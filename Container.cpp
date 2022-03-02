@@ -2,7 +2,7 @@
 #include "Bird.h"
 #include "Fish.h"
 
-
+#include "Animal.h"
 
 
 Container* Container::In(std::ifstream & file)
@@ -19,6 +19,11 @@ Container* Container::In(std::ifstream & file)
 	case 'b':
 	{
 		c = new Bird(); 
+		break;
+	}
+	case 'a':
+	{
+		c = new Animal();
 		break;
 	}
 		
