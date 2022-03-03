@@ -21,6 +21,11 @@ int main(int argc, char* argv[])
 	outputFile << "Filled container. " << endl;
 	c->output(outputFile);
 	c->Clear();
+	auto cur = c->sort();
+	delete c;
+	c = cur;
+	outputFile << "Sorted container. " << endl;
+	c->output(outputFile);
 	outputFile << "Empty container. " << endl;
 	c->output(outputFile);
 	cout << "Stop" << endl;

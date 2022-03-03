@@ -71,5 +71,5 @@ void Fish::Out(std::ofstream & file)
 
 int Fish::nameSize()
 {
-	return name.length;
+	return name.length();
 }

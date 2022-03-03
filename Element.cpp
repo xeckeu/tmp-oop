@@ -61,3 +61,13 @@ bool Element::input(std::istream & file)
 
 	return false;
 }
+
+int Element::getSizeName()
+{
+	return nameSize;
+}
+
+void Element::setSizeName(int inSize)
+{
+	nameSize = inSize;
+}
