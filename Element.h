@@ -19,5 +19,7 @@ public:
 	void setPrev(Element* inPrev);
 	bool setContainer(Container* inContainer);
 	bool input(std::istream&file);
+	int getNameSize();
+	void setNameSize(int inSize);
 };
 

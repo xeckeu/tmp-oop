@@ -1,9 +1,1 @@
 Filled container. 
-Container contents 5 elements.
-0: eagle false.
-1: salmon Sea
-2: pigeon true.
-3: pike River
-4: roughy Lake
-Empty container. 
-Container contents 0 elements.

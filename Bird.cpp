@@ -41,13 +41,14 @@ void Bird::Out(std::ofstream & file)
 {
 	file << name << " ";
 	if(migratory)
-		file<< "true.\n";
-	else file << "false.\n";
+		file<< "true ";
+	else file << "false ";
+	file << nameSize();
 }
 
 int Bird::nameSize()
 {
-	return name.length;
+	return name.length();
 }
 
 
