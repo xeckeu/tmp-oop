@@ -45,4 +45,9 @@ void Bird::Out(std::ofstream & file)
 	else file << "false.\n";
 }
 
+void Bird::OutBird(std::ofstream & file)
+{
+	Out(file);
+}
+
 

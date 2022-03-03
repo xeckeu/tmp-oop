@@ -44,6 +44,10 @@ habitat Fish::getAreal()
 	return areal;
 }
 
+void Fish::OutFish(std::ofstream &file)
+{
+	Out(file);
+}
 void Fish::Out(std::ofstream & file)
 {
 	file << name<<" ";

@@ -21,5 +21,6 @@ public:
 	void addElement(Element* addingElem);
 	void input(std::ifstream& file);
 	void output(std::ofstream& file);
+	void outputOne(std::ofstream& file, char type);
 };
 
