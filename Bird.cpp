@@ -47,7 +47,7 @@ void Bird::Out(std::ofstream & file)
 
 int Bird::nameSize()
 {
-	return name.length;
+	return name.length();
 }
 
 

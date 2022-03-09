@@ -23,12 +23,12 @@ Element::~Element()
 
 Element * Element::getNext()
 {
-	return new Element (next);
+	return next;
 }
 
 Element * Element::getPrev()
 {
-	return new Element (prev);
+	return prev;
 }
 
 Container * Element::getContainer()

@@ -101,18 +101,20 @@ Head * Head::sort()
 	{
 		cur->setSizeName( cur->getContainer()->nameSize());
 		cur = cur->getNext();
-	} while (cur != this->end);
+	} while (cur != this->begin);
 	Head* newList = new Head();
 	while (this->size != 0)
 	{
 		cur = this->begin;
 		auto newMin = this->begin;
+		int curS = this->size;
 		do
 		{
 			if (newMin->getSizeName() > cur->getSizeName())
 				newMin = cur;
 			cur = cur->getNext();
-		} while (cur != this->end);
+			curS -= 1;
+		} while (curS);
 		if (newMin == this->begin)
 		{
 			this->begin = this->begin->getNext();
@@ -122,9 +124,10 @@ Head * Head::sort()
 			this->end = this->begin->getPrev();
 		}
 		auto cur2 = newMin->getPrev();
-		newMin->setPrev(newMin->getNext());
-		cur2->setNext(newMin->getPrev());
+		newMin->getPrev()->setNext(newMin->getNext());
+		cur2->getNext()->setPrev(cur2);
 		newList->addElement(newMin);
+		this->size--;
 	}
 	return newList;
 }
