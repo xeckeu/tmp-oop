@@ -1,8 +1,12 @@
-﻿Сборка начата 03.03.2022 19:40:52.
+﻿Сборка начата 09.03.2022 19:36:56.
      1>Проект "C:\Users\user\documents\visual studio 2015\Projects\progaOOP\progaOOP\progaOOP.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Bird.cpp Fish.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Bird.cpp Client.cpp Container.cpp Element.cpp Fish.cpp Head.cpp
+         Head.cpp
          Fish.cpp
+         Element.cpp
+         Container.cpp
+         Client.cpp
          Bird.cpp
          Создание кода...
        Link:
@@ -17,4 +21,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:01.85
+Затраченное время: 00:00:03.53

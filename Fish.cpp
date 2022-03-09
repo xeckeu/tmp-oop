@@ -67,7 +67,7 @@ void Fish::Out(std::ofstream & file)
 	default:
 		break;
 	}
-	file << nameSize();
+	file << nameSize()<<"\n";
 }
 
 int Fish::nameSize()
