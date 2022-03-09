@@ -1,5 +1,8 @@
 b eagle 0
+a cow herbivore
 f salmon sea
 b pigeon 1
+a anteater insectivore
 f pike river
+a wolf predator
 f roughy lake

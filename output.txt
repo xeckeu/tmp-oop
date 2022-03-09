@@ -1,9 +1,12 @@
 Filled container. 
-Container contents 5 elements.
+Container contents 8 elements.
 0: eagle false.
-1: salmon Sea
-2: pigeon true.
-3: pike River
-4: roughy Lake
+1: cow herbivore
+2: salmon Sea
+3: pigeon true.
+4: anteater insectivore
+5: pike River
+6: wolf predator
+7: roughy Lake
 Empty container. 
 Container contents 0 elements.
