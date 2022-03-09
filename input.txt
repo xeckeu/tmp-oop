@@ -1,5 +1,5 @@
-b eagle 0
-f salmon sea
-b pigeon 1
-f pike river
-f roughy lake
+b eagle 0 5
+f salmon sea 2
+b pigeon 1 3 
+f pike river 4
+f roughy lake 7

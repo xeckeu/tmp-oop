@@ -79,5 +79,5 @@ void Fish::Out(std::ofstream & file)
 		break;
 	}
 
-	file << "age " << age << "\n";
+	file << " age " << age << "\n";
 }
