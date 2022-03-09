@@ -17,5 +17,6 @@ public:
 	void InData(std::ifstream &file);
 	void Out(std::ofstream &file);
 	void OutBird(std::ofstream &file);
+	void OutFish(std::ofstream &file);
 };
 

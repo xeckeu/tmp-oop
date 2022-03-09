@@ -17,6 +17,7 @@ public:
 	habitat getAreal();
 	void Out(std::ofstream &file);
 	void OutFish(std::ofstream &file);
+	void OutBird(std::ofstream &file);
 private:
 
 	std::string name;

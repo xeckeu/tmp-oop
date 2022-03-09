@@ -1,28 +1,18 @@
-﻿Сборка начата 03.03.2022 20:21:00.
+﻿Сборка начата 09.03.2022 20:08:24.
      1>Проект "C:\Users\user\documents\visual studio 2015\Projects\progaOOP\progaOOP\progaOOP.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Client.cpp Container.cpp Fish.cpp Head.cpp
-         Head.cpp
-         Fish.cpp
-     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\fish.cpp(48): error C2509: OutFish: функция-член не объявлена в "Fish"
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\fish.h(7): note:  см. объявление "Fish"
-         Container.cpp
-     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(16): error C2259: Fish: невозможно создать экземпляр абстрактного класса
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(16): note: из-за следующих членов:
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(16): note: void Container::OutBird(std::ofstream &): абстрактный
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.h(10): note:  см. объявление "Container::OutBird"
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(16): note: void Container::OutFish(std::ofstream &): абстрактный
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.h(11): note:  см. объявление "Container::OutFish"
-     1>c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(21): error C2259: Bird: невозможно создать экземпляр абстрактного класса
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(21): note: из-за следующих членов:
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(21): note: void Container::OutBird(std::ofstream &): абстрактный
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.h(10): note:  см. объявление "Container::OutBird"
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.cpp(21): note: void Container::OutFish(std::ofstream &): абстрактный
-         c:\users\user\documents\visual studio 2015\projects\progaoop\progaoop\container.h(11): note:  см. объявление "Container::OutFish"
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Client.cpp
          Client.cpp
-         Создание кода...
-     1>Сборка проекта "C:\Users\user\documents\visual studio 2015\Projects\progaOOP\progaOOP\progaOOP.vcxproj" завершена (целевые объекты Build) с ошибкой.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\user\documents\visual studio 2015\Projects\progaOOP\Debug\progaOOP.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\user\documents\visual studio 2015\Projects\progaOOP\Debug\progaOOP.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\user\documents\visual studio 2015\Projects\progaOOP\Debug\progaOOP.lib" /MACHINE:X86 Debug\Bird.obj
+         Debug\Client.obj
+         Debug\Container.obj
+         Debug\Element.obj
+         Debug\Fish.obj
+         Debug\Head.obj
+         progaOOP.vcxproj -> C:\Users\user\documents\visual studio 2015\Projects\progaOOP\Debug\progaOOP.exe
+     1>Сборка проекта "C:\Users\user\documents\visual studio 2015\Projects\progaOOP\progaOOP\progaOOP.vcxproj" завершена (целевые объекты Build).
 
-Ошибка сборки.
+Сборка успешно завершена.
 
-Затраченное время: 00:00:01.89
+Затраченное время: 00:00:00.98

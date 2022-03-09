@@ -48,6 +48,10 @@ void Fish::OutFish(std::ofstream &file)
 {
 	Out(file);
 }
+void Fish::OutBird(std::ofstream & file)
+{
+	return;
+}
 void Fish::Out(std::ofstream & file)
 {
 	file << name<<" ";

@@ -5,5 +5,14 @@ Container contents 5 elements.
 2: pigeon true.
 3: pike River
 4: roughy Lake
-Empty container. 
+Only fish 
+Container contents 5 elements.
+0: 1: salmon Sea
+2: 3: pike River
+4: roughy Lake
+Only bird 
+Container contents 5 elements.
+0: eagle false.
+1: 2: pigeon true.
+3: 4: Empty container. 
 Container contents 0 elements.

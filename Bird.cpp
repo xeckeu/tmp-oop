@@ -50,4 +50,10 @@ void Bird::OutBird(std::ofstream & file)
 	Out(file);
 }
 
+void Bird::OutFish(std::ofstream & file)
+{
+	return;
+}
+
+
 
