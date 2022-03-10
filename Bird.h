@@ -5,9 +5,9 @@
 class Bird : public Container
 {
 private:
-	std::string name;
+	std::string name;//â container
 	bool migratory;
-	int age;
+	int age;//â container
 public:
 	Bird();
 	~Bird();
