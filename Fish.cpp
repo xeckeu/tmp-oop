@@ -12,6 +12,7 @@ void Fish::InData(std::ifstream & file)
 		this->areal = habitat::River;
 	else if (cur == "sea")
 		this->areal = habitat::Sea;
+	file >> age;
 }
 
 Fish::Fish()
@@ -27,6 +28,16 @@ Fish::~Fish()
 void Fish::setName(std::string inName)
 {
 	name = inName;
+}
+
+void Fish::setAge(int inAge)
+{
+	age = inAge;
+}
+
+int Fish::getAge()
+{
+	return age;
 }
 
 void Fish::setAreal(habitat inAreal)
@@ -51,20 +62,22 @@ void Fish::Out(std::ofstream & file)
 	{
 	case Sea:
 	{
-		file << "Sea\n";
+		file << "Sea";
 		break;
 	}
 	case River:
 	{
-		file << "River\n";
+		file << "River";
 		break;
 	}
 	case Lake: 
 	{
-		file << "Lake\n";
+		file << "Lake";
 		break;
 	}
 	default:
 		break;
 	}
+
+	file << " age " << age << "\n";
 }

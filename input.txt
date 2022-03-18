@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 b eagle 0
 a cow herbivore
 f salmon sea
@@ -6,3 +7,10 @@ a anteater insectivore
 f pike river
 a wolf predator
 f roughy lake
+=======
+b eagle 0 5
+f salmon sea 2
+b pigeon 1 3 
+f pike river 4
+f roughy lake 7
+>>>>>>> newField
