@@ -51,20 +51,31 @@ void Animal::Out(std::ofstream & file)
 	{
 	case predator:
 	{
-		file << "predator\n";
+		file << "predator ";
 		break;
 	}
 	case  herbivore:
 	{
-		file << "herbivore\n";
+		file << "herbivore ";
 		break;
 	}
 	case insectivore:
 	{
-		file << "insectivore\n";
+		file << "insectivore ";
 		break;
 	}
 	default:
 		break;
 	}
+	file << " age " << age;
+}
+
+void Animal::setAge(int inAge)
+{
+	int age = inAge;
+}
+
+int Animal::getAge()
+{
+	return age;
 }

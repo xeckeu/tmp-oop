@@ -6,6 +6,7 @@ class Animal : public Container
 {
 	std::string name="";
 	nutrition eat;
+	int age;
 public:
 	Animal();
 	~Animal();
@@ -15,5 +16,7 @@ public:
 	nutrition getEating();
 	void InData(std::ifstream &file);
 	void Out(std::ofstream &file);
+	void setAge(int inAge);
+	int getAge();
 };
 
