@@ -10,6 +10,11 @@ class Animal : public Container
 public:
 	Animal();
 	~Animal();
+
+	int nameSize();
+	void OutBird(std::ofstream &file);
+	void OutFish(std::ofstream &file);
+	void OutAnimal(std::ofstream &file);
 	void setName(std::string inName);
 	void setEating(nutrition type);
 	std::string getName();

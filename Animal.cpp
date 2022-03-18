@@ -11,6 +11,27 @@ Animal::~Animal()
 {
 }
 
+int Animal::nameSize()
+{
+	return name.length();
+}
+
+void Animal::OutBird(std::ofstream & file)
+{
+	return;
+}
+
+void Animal::OutFish(std::ofstream & file)
+{
+	return;
+
+}
+
+void Animal::OutAnimal(std::ofstream & file)
+{
+	Out(file);
+}
+
 void Animal::setName(std::string inName)
 {
 	name = inName;

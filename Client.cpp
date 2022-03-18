@@ -26,6 +26,12 @@ int main(int argc, char* argv[])
 	c = cur;
 	outputFile << "Sorted container. " << endl;
 	c->output(outputFile);
+	outputFile << "Only fish " << endl;
+	c->outputOne(outputFile,'f');
+	outputFile << "Only bird " << endl;
+	c->outputOne(outputFile, 'b');
+	outputFile << "Only animal " << endl;
+	c->outputOne(outputFile, 'a');
 	c->Clear();
 	outputFile << "Empty container. " << endl;
 	c->output(outputFile);

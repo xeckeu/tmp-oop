@@ -20,5 +20,8 @@ public:
 	void setAge(int inAge);
 	int getAge();
 	int nameSize();
+	void OutBird(std::ofstream &file);
+	void OutFish(std::ofstream &file);
+	void OutAnimal(std::ofstream &file);
 };
 

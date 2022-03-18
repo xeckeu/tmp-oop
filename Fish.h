@@ -19,6 +19,9 @@ public:
 	habitat getAreal();
 	void Out(std::ofstream &file);
 	int nameSize();
+	void OutFish(std::ofstream &file);
+	void OutBird(std::ofstream &file);
+	void OutAnimal(std::ofstream &file);
 private:
 	int age;
 	std::string name;

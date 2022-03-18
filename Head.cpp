@@ -132,6 +132,34 @@ Head * Head::sort()
 	return newList;
 }
 
+void Head::outputOne(std::ofstream & file, char type)
+{
+	file << "Container contents " << size << " elements.\n";
+	auto cur = begin;
+	for (int i = 0; i < size; i++)
+	{
+		if (type == 'f')
+		{
+			file << i << ": ";
+			cur->getContainer()->OutFish(file);
+
+		}
+		else if(type=='b')
+		{
+			file << i << ": ";
+			cur->getContainer()->OutBird(file);
+		}
+		else
+		{
+			file << i << ": ";
+			cur->getContainer()->OutAnimal(file);
+		}
+		cur = cur->getNext();
+	}
+}
+
+
+
 void Head::input(std::ifstream& file)
 {
 	

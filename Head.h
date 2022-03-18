@@ -21,6 +21,8 @@ public:
 	void addElement(Element* addingElem);
 	void input(std::ifstream& file);
 	void output(std::ofstream& file);
+
 	Head* sort();
+	void outputOne(std::ofstream& file, char type);
 };
 

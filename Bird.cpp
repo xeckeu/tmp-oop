@@ -63,4 +63,20 @@ int Bird::nameSize()
 	return name.length();
 }
 
+void Bird::OutBird(std::ofstream & file)
+{
+	Out(file);
+}
+
+void Bird::OutFish(std::ofstream & file)
+{
+	return;
+}
+
+void Bird::OutAnimal(std::ofstream & file)
+{
+	return;
+}
+
+
 
