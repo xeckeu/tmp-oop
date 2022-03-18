@@ -7,6 +7,7 @@ private:
 	Element* next;
 	Element* prev;
 	Container* c;
+	int nameSize;
 public:
 	Element();
 	Element(Element* inElement);
@@ -18,5 +19,7 @@ public:
 	void setPrev(Element* inPrev);
 	bool setContainer(Container* inContainer);
 	bool input(std::istream&file);
+	int getNameSize();
+	void setNameSize(int inSize);
 };
 

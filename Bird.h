@@ -19,5 +19,6 @@ public:
 	void Out(std::ofstream &file);
 	void setAge(int inAge);
 	int getAge();
+	int nameSize();
 };
 

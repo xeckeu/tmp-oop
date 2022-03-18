@@ -18,6 +18,7 @@ public:
 	std::string getName();
 	habitat getAreal();
 	void Out(std::ofstream &file);
+	int nameSize();
 private:
 	int age;
 	std::string name;

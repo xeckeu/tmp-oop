@@ -1,5 +1,6 @@
 Filled container. 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Container contents 8 elements.
 0: eagle false.
 1: cow herbivore
@@ -18,4 +19,8 @@ Container contents 5 elements.
 4: roughy Lakeage 7
 >>>>>>> newField
 Empty container. 
+=======
+Container contents 5 elements.
+0: eagle false 51: salmon Sea 62: pigeon true 63: pike River 44: roughy Lake 6Empty container. 
+>>>>>>> newFunc
 Container contents 0 elements.
