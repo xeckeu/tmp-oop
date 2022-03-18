@@ -3,6 +3,7 @@ Filled container.
 <<<<<<< HEAD
 Container contents 8 elements.
 0: eagle false.
+<<<<<<< HEAD
 1: cow herbivore
 2: salmon Sea
 3: pigeon true.
@@ -18,6 +19,19 @@ Container contents 5 elements.
 3: pike Riverage 4
 4: roughy Lakeage 7
 >>>>>>> newField
+=======
+1: salmon Sea
+2: pigeon true.
+3: pike River
+4: roughy Lake
+Sorted container. 
+Container contents 5 elements.
+0: pike River
+1: eagle false.
+2: salmon Sea
+3: pigeon true.
+4: roughy Lake
+>>>>>>> sort
 Empty container. 
 =======
 Container contents 5 elements.

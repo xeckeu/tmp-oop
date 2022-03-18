@@ -94,6 +94,44 @@ void Head::output(std::ofstream & file)
 	}
 }
 
+Head * Head::sort()
+{
+	auto cur = this->begin;
+	do
+	{
+		cur->setSizeName( cur->getContainer()->nameSize());
+		cur = cur->getNext();
+	} while (cur != this->begin);
+	Head* newList = new Head();
+	while (this->size != 0)
+	{
+		cur = this->begin;
+		auto newMin = this->begin;
+		int curS = this->size;
+		do
+		{
+			if (newMin->getSizeName() > cur->getSizeName())
+				newMin = cur;
+			cur = cur->getNext();
+			curS -= 1;
+		} while (curS);
+		if (newMin == this->begin)
+		{
+			this->begin = this->begin->getNext();
+		}
+		if (newMin == this->end)
+		{
+			this->end = this->begin->getPrev();
+		}
+		auto cur2 = newMin->getPrev();
+		newMin->getPrev()->setNext(newMin->getNext());
+		cur2->getNext()->setPrev(cur2);
+		newList->addElement(newMin);
+		this->size--;
+	}
+	return newList;
+}
+
 void Head::input(std::ifstream& file)
 {
 	

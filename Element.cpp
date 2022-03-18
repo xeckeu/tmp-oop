@@ -23,12 +23,12 @@ Element::~Element()
 
 Element * Element::getNext()
 {
-	return new Element (next);
+	return next;
 }
 
 Element * Element::getPrev()
 {
-	return new Element (prev);
+	return prev;
 }
 
 Container * Element::getContainer()
@@ -62,12 +62,12 @@ bool Element::input(std::istream & file)
 	return false;
 }
 
-int Element::getNameSize()
+int Element::getSizeName()
 {
 	return nameSize;
 }
 
-void Element::setNameSize(int inSize)
+void Element::setSizeName(int inSize)
 {
 	nameSize = inSize;
 }

@@ -20,6 +20,12 @@ int main(int argc, char* argv[])
 	c->input(inputFile);
 	outputFile << "Filled container. " << endl;
 	c->output(outputFile);
+	
+	auto cur = c->sort();
+	delete c;
+	c = cur;
+	outputFile << "Sorted container. " << endl;
+	c->output(outputFile);
 	c->Clear();
 	outputFile << "Empty container. " << endl;
 	c->output(outputFile);
