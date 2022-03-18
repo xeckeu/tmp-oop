@@ -104,7 +104,7 @@ void Head::outputOne(std::ofstream & file, char type)
 		{
 			file << i << ": ";
 			cur->getContainer()->OutFish(file);
-			
+
 		}
 		else
 		{
@@ -113,8 +113,9 @@ void Head::outputOne(std::ofstream & file, char type)
 		}
 		cur = cur->getNext();
 	}
-	
 }
+
+
 
 void Head::input(std::ifstream& file)
 {
