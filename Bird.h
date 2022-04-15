@@ -11,17 +11,16 @@ private:
 public:
 	Bird();
 	~Bird();
-	void setName(std::string inName);
+	
 	void setMigratory(bool inMigratory);
-	std::string getName();
+	
 	bool getMigratory();
-	void InData(std::ifstream &file);
-	void Out(std::ofstream &file);
-	void setAge(int inAge);
-	int getAge();
+	int InData(std::ifstream &file);
+	int Out(std::ofstream &file);
+	
 	int nameSize();
-	void OutBird(std::ofstream &file);
-	void OutFish(std::ofstream &file);
-	void OutAnimal(std::ofstream &file);
+	int OutBird(std::ofstream &file);
+	int OutFish(std::ofstream &file);
+	int OutAnimal(std::ofstream &file);
 };
 

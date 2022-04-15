@@ -35,6 +35,10 @@
     <ClCompile Include="Fish.cpp" />
     <ClCompile Include="Head.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
+    <Text Include="output.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{AB2C1C78-C258-4866-8BB9-68D8CA4FFDAB}</ProjectGuid>
     <RootNamespace>progaOOP</RootNamespace>

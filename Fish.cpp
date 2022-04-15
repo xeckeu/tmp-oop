@@ -2,10 +2,16 @@
 
 
 
-void Fish::InData(std::ifstream & file)
+int Fish::InData(std::ifstream & file)
 {
 	std::string cur;
-	file >> name >> cur;
+	file >> name;
+	if (file.bad())
+		return 1; 
+	file>> cur;
+	if (file.bad())
+		return 2;
+	
 	if (cur == "lake")
 		this->areal = habitat::Lake;
 	else if (cur == "river")
@@ -13,6 +19,9 @@ void Fish::InData(std::ifstream & file)
 	else if (cur == "sea")
 		this->areal = habitat::Sea;
 	file >> age;
+	if (file.bad())
+		return 3;
+	return 0;
 }
 
 Fish::Fish()
@@ -25,51 +34,40 @@ Fish::~Fish()
 {
 }
 
-void Fish::setName(std::string inName)
-{
-	name = inName;
-}
 
-void Fish::setAge(int inAge)
-{
-	age = inAge;
-}
-
-int Fish::getAge()
-{
-	return age;
-}
 
 void Fish::setAreal(habitat inAreal)
 {
 	areal = inAreal;
 }
 
-std::string Fish::getName()
-{
-	return name;
-}
+
 
 habitat Fish::getAreal()
 {
 	return areal;
 }
 
-void Fish::OutFish(std::ofstream &file)
+int Fish::OutFish(std::ofstream &file)
 {
-	Out(file);
+	return Out(file);
 }
-void Fish::OutBird(std::ofstream & file)
+int Fish::OutBird(std::ofstream & file)
 {
-	return;
+	return 4;
 }
-void Fish::OutAnimal(std::ofstream & file)
+int Fish::OutAnimal(std::ofstream & file)
 {
-	return;
+	return 4;
 }
-void Fish::Out(std::ofstream & file)
+int Fish::Out(std::ofstream & file)
 {
-	file << name<<" ";
+	file << "name ";
+	if (file.bad())
+		return 1;
+	file<< name << " areal ";
+	if (file.bad())
+		return 2;
 	switch (areal)
 	{
 	case Sea:
@@ -88,11 +86,17 @@ void Fish::Out(std::ofstream & file)
 		break;
 	}
 	default:
+		return -1;
 		break;
 	}
 
-	file << " age " << age << " name size ";
+	file << "age " << age << " name size ";
+	if (file.bad())
+		return 3;
 	file << nameSize()<<"\n";
+	if (file.bad())
+		return 4;
+	return 0;
 }
 
 int Fish::nameSize()

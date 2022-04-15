@@ -21,17 +21,19 @@ int main(int argc, char* argv[])
 	outputFile << "Filled container. " << endl;
 	c->output(outputFile);
 	
-	auto cur = c->sort();
-	delete c;
-	c = cur;
-	outputFile << "Sorted container. " << endl;
-	c->output(outputFile);
 	outputFile << "Only fish " << endl;
-	c->outputOne(outputFile,'f');
+	c->outputOne(outputFile, 'f');
 	outputFile << "Only bird " << endl;
 	c->outputOne(outputFile, 'b');
 	outputFile << "Only animal " << endl;
 	c->outputOne(outputFile, 'a');
+	Head* cur;
+	c->sort(cur);
+	delete c;
+	c = cur;
+	outputFile << "Sorted container. " << endl;
+	c->output(outputFile);
+	
 	c->Clear();
 	outputFile << "Empty container. " << endl;
 	c->output(outputFile);

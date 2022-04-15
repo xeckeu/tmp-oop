@@ -17,12 +17,12 @@ public:
 	void setEnd(Element* inEnd);
 	void setSize(int inSize);
 	int getSize();
-	void Clear();
-	void addElement(Element* addingElem);
-	void input(std::ifstream& file);
-	void output(std::ofstream& file);
-
-	Head* sort();
-	void outputOne(std::ofstream& file, char type);
+	int Clear();
+	Element* addElement(Element* addingElem);
+	int input(std::ifstream& file);
+	int output(std::ofstream& file);
+	int equ(Element* f, Element* s);
+	int* sort(Head*& newHead);
+	int outputOne(std::ofstream& file, char type);
 };
 

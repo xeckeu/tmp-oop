@@ -5,6 +5,26 @@
 #include "Animal.h"
 
 
+void Container::setName(std::string inName)
+{
+	name = inName;
+}
+
+std::string Container::getName()
+{
+	return name;
+}
+
+void Container::setAge(int inAge)
+{
+	age = inAge;
+}
+
+int Container::getAge()
+{
+	return age;
+}
+
 Container* Container::In(std::ifstream & file)
 {
 	Container *c;

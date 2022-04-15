@@ -1,0 +1,4 @@
+Container contents 3 elements.
+0: name eagle migratory false. age 5 name size 5
+1: name cow type of eating herbivore  age 2 name size 3
+2: name salmon areal Sea age 6 name size 6

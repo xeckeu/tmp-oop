@@ -1,7 +1,6 @@
 #include "Head.h"
 
 
-
 Head::Head()
 {
 	begin = nullptr;
@@ -44,7 +43,7 @@ int Head::getSize()
 {
 	return size;
 }
-void Head::Clear()
+int Head::Clear()
 {
 	auto erasing = begin;
 	while (size > 0)
@@ -58,9 +57,10 @@ void Head::Clear()
 		size--;
 		
 	}
+	return size;
 }
 
-void Head::addElement(Element * addingElem)
+Element* Head::addElement(Element * addingElem)
 {
 	if (size == 0)
 	{
@@ -80,22 +80,39 @@ void Head::addElement(Element * addingElem)
 		begin->setPrev(addingElem);
 	}
 	size++;
+	return this->end;
 }
 
-void Head::output(std::ofstream & file)
+int Head::output(std::ofstream & file)
 {
 	file << "Container contents " << size << " elements.\n";
+	int num = 0;
 	auto cur = begin;
 	for (int i = 0; i < size; i++)
 	{
 		file << i << ": ";
-		cur->getContainer()->Out(file);
+		if (cur->getContainer()->Out(file) == 0)
+			num++;
 		cur = cur->getNext();
 	}
+	return num;
 }
 
-Head * Head::sort()
+int Head::equ(Element * f, Element * s)
 {
+	if (f->getSizeName() > s->getSizeName())
+		return 1;
+	if (f->getSizeName() == s->getSizeName())
+		return 0;
+		return -1;
+}
+
+int * Head::sort(Head*& newHead)
+{
+	int* choises = new int[this->size];
+	int i = 0;
+	int indChoises = 0;
+	int minInd = 0;
 	auto cur = this->begin;
 	do
 	{
@@ -105,13 +122,18 @@ Head * Head::sort()
 	Head* newList = new Head();
 	while (this->size != 0)
 	{
+		minInd = 0;
 		cur = this->begin;
 		auto newMin = this->begin;
 		int curS = this->size;
 		do
 		{
-			if (newMin->getSizeName() > cur->getSizeName())
+			if (equ(newMin, cur) == 1)
+			{
 				newMin = cur;
+				minInd = i;
+			}
+			i++;
 			cur = cur->getNext();
 			curS -= 1;
 		} while (curS);
@@ -127,42 +149,45 @@ Head * Head::sort()
 		newMin->getPrev()->setNext(newMin->getNext());
 		cur2->getNext()->setPrev(cur2);
 		newList->addElement(newMin);
+		choises[indChoises] = minInd;
+		indChoises++;
 		this->size--;
 	}
-	return newList;
+	newHead = newList;
+	return choises;
 }
 
-void Head::outputOne(std::ofstream & file, char type)
+int Head::outputOne(std::ofstream & file, char type)
 {
-	file << "Container contents " << size << " elements.\n";
+	int num = 0;
 	auto cur = begin;
 	for (int i = 0; i < size; i++)
 	{
 		if (type == 'f')
 		{
-			file << i << ": ";
-			cur->getContainer()->OutFish(file);
-
+			if(cur->getContainer()->OutFish(file)==0)
+			num++;
 		}
 		else if(type=='b')
 		{
-			file << i << ": ";
-			cur->getContainer()->OutBird(file);
+			if(cur->getContainer()->OutBird(file)==0)
+			num++;
 		}
-		else
+		else if(type=='a')
 		{
-			file << i << ": ";
-			cur->getContainer()->OutAnimal(file);
+			if(cur->getContainer()->OutAnimal(file)==0)
+			num++;
 		}
 		cur = cur->getNext();
 	}
+	return num;
 }
 
 
 
-void Head::input(std::ifstream& file)
+int Head::input(std::ifstream& file)
 {
-	
+	int num = 0;
 	while (!file.eof())
 	{
 		Element*newElement = new Element();
@@ -170,7 +195,8 @@ void Head::input(std::ifstream& file)
 		{
 
 			addElement(newElement);
-
+			num++;
 		}
 	}
+	return num;
 }
