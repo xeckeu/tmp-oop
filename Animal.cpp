@@ -16,20 +16,20 @@ int Animal::nameSize()
 	return name.length();
 }
 
-int Animal::OutBird(std::ofstream & file)
+int Animal::outBird(std::ofstream & file)
 {
 	return 4;
 }
 
-int Animal::OutFish(std::ofstream & file)
+int Animal::outFish(std::ofstream & file)
 {
 	return 4;
 
 }
 
-int Animal::OutAnimal(std::ofstream & file)
+int Animal::outAnimal(std::ofstream & file)
 {
-	return Out(file);
+	return out(file);
 }
 
 
@@ -46,34 +46,48 @@ nutrition Animal::getEating()
 	return eat;
 }
 
-int Animal::InData(std::ifstream & file)
+int Animal::inData(std::ifstream & file)
 {
 
 	file >> name;
-	if (file.bad())
+	if (file.fail())
+	{
 		return 1;
+	}
 	std::string type;
 	file >> type;
-	if (file.bad())
+	if (file.fail())
+	{
 		return 2;
+	}
 	if (type == "predator")
+	{
 		eat = predator;
+	}
 	else if (type == "herbivore")
+	{
 		eat = herbivore;
+	}
 	else if (type == "insectivore")
+	{
 		eat = insectivore;
+	}
 	file >> age;
-	if (file.bad())
+	if (file.fail())
+	{
 		return 3;
+	}
 	return 0;
 }
 
-int Animal::Out(std::ofstream & file)
+int Animal::out(std::ofstream & file)
 {
 	
 	file <<"name "<< name << " type of eating ";
-	if (file.bad())
+	if (file.fail())
+	{
 		return 1;
+	}
 	switch (eat)
 	{
 	case predator:
@@ -92,16 +106,20 @@ int Animal::Out(std::ofstream & file)
 		break;
 	}
 	default:
-		break;
-	}
-	if (file.bad())
+	{
 		return 2;
+	}
+	}
 	file << " age " << age;
-	if (file.bad())
-		return 3; 
+	if (file.fail())
+	{
+		return 3;
+	}
 	file<< " name size " << nameSize() << "\n";
-	if (file.bad())
+	if (file.fail())
+	{
 		return 4;
+	}
 	return 0;
 }
 

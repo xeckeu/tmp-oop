@@ -1,7 +1,7 @@
 
-b eagle 0 5
-a cow herbivore 2
-f salmon sea 6
+b eagle 0 /
+o cow herbivore 2
+f  sea 6
 b pigeon 1 7
 a anteater insectivore 9
 f pike river 1

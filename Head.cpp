@@ -11,7 +11,7 @@ Head::Head()
 
 Head::~Head()
 {
-	Clear();
+	clear();
 }
 
 Element * Head::getBegin()
@@ -43,7 +43,8 @@ int Head::getSize()
 {
 	return size;
 }
-int Head::Clear()
+//очищает список
+int Head::clear()
 {
 	auto erasing = begin;
 	while (size > 0)
@@ -62,6 +63,8 @@ int Head::Clear()
 
 Element* Head::addElement(Element * addingElem)
 {
+	if (addingElem == nullptr)
+		return nullptr;
 	if (size == 0)
 	{
 		end = addingElem;
@@ -91,8 +94,13 @@ int Head::output(std::ofstream & file)
 	for (int i = 0; i < size; i++)
 	{
 		file << i << ": ";
-		if (cur->getContainer()->Out(file) == 0)
+		if (cur->getContainer()->out(file) == 0)
 			num++;
+		else
+		{
+			file << "Fatal error\n";
+			return num;
+		}
 		cur = cur->getNext();
 	}
 	return num;
@@ -100,6 +108,8 @@ int Head::output(std::ofstream & file)
 
 int Head::equ(Element * f, Element * s)
 {
+	if (f == nullptr || s == nullptr)
+		return -2;
 	if (f->getSizeName() > s->getSizeName())
 		return 1;
 	if (f->getSizeName() == s->getSizeName())
@@ -114,6 +124,8 @@ int * Head::sort(Head*& newHead)
 	int indChoises = 0;
 	int minInd = 0;
 	auto cur = this->begin;
+	if (this->size == 0)
+		return nullptr;
 	do
 	{
 		cur->setSizeName( cur->getContainer()->nameSize());
@@ -157,7 +169,9 @@ int * Head::sort(Head*& newHead)
 	return choises;
 }
 
-int Head::outputOne(std::ofstream & file, char type)
+int Head::outputOne(std::ofstream & file,//файл вывода
+	char type//выводимый тип
+	)
 {
 	int num = 0;
 	auto cur = begin;
@@ -165,17 +179,17 @@ int Head::outputOne(std::ofstream & file, char type)
 	{
 		if (type == 'f')
 		{
-			if(cur->getContainer()->OutFish(file)==0)
+			if(cur->getContainer()->outFish(file)==0)
 			num++;
 		}
 		else if(type=='b')
 		{
-			if(cur->getContainer()->OutBird(file)==0)
+			if(cur->getContainer()->outBird(file)==0)
 			num++;
 		}
 		else if(type=='a')
 		{
-			if(cur->getContainer()->OutAnimal(file)==0)
+			if(cur->getContainer()->outAnimal(file)==0)
 			num++;
 		}
 		cur = cur->getNext();
@@ -191,9 +205,9 @@ int Head::input(std::ifstream& file)
 	while (!file.eof())
 	{
 		Element*newElement = new Element();
-		if (newElement->setContainer( newElement->getContainer()->In(file)) !=0)
+		if (newElement->setContainer( newElement->getContainer()->in(file)) !=0)
 		{
-
+			if(newElement!=nullptr)
 			addElement(newElement);
 			num++;
 		}

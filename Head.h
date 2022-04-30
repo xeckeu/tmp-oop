@@ -17,7 +17,7 @@ public:
 	void setEnd(Element* inEnd);
 	void setSize(int inSize);
 	int getSize();
-	int Clear();
+	int clear();
 	Element* addElement(Element* addingElem);
 	int input(std::ifstream& file);
 	int output(std::ofstream& file);

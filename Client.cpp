@@ -17,8 +17,19 @@ int main(int argc, char* argv[])
 	ofstream outputFile("output.txt");
 	cout << "Start" << endl;
 	Head* c= new Head();
+	//проверка файла на открытие
+	if (!inputFile.is_open())
+	{
+		cout << "File isn't opened\n";
+		exit(2);
+	}
 	c->input(inputFile);
 	outputFile << "Filled container. " << endl;
+	if (!outputFile.is_open())
+	{
+		cout << "File isn't opened\n";
+		exit(3);
+	}
 	c->output(outputFile);
 	
 	outputFile << "Only fish " << endl;
@@ -34,7 +45,7 @@ int main(int argc, char* argv[])
 	outputFile << "Sorted container. " << endl;
 	c->output(outputFile);
 	
-	c->Clear();
+	c->clear();
 	outputFile << "Empty container. " << endl;
 	c->output(outputFile);
 	cout << "Stop" << endl;

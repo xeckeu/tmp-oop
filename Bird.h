@@ -15,12 +15,12 @@ public:
 	void setMigratory(bool inMigratory);
 	
 	bool getMigratory();
-	int InData(std::ifstream &file);
-	int Out(std::ofstream &file);
+	int inData(std::ifstream &file);
+	int out(std::ofstream &file);
 	
 	int nameSize();
-	int OutBird(std::ofstream &file);
-	int OutFish(std::ofstream &file);
-	int OutAnimal(std::ofstream &file);
+	int outBird(std::ofstream &file);
+	int outFish(std::ofstream &file);
+	int outAnimal(std::ofstream &file);
 };
 

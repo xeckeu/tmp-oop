@@ -25,11 +25,13 @@ int Container::getAge()
 	return age;
 }
 
-Container* Container::In(std::ifstream & file)
+//определение типа живтоного и ввод.
+Container* Container::in(std::ifstream & file)
 {
 	Container *c;
 	char k;
 	file >> k;
+
 	switch (k) {
 	case 'f':
 	{
@@ -48,10 +50,17 @@ Container* Container::In(std::ifstream & file)
 	}
 		
 	default:
+		file.clear();
+		std::string cur;
+		std::getline(file, cur);
 		return 0;
 	}
-	c->InData(file);
+	if(c->inData(file)==0)
 	return c;
+	file.clear();
+	std::string cur;
+	std::getline(file, cur);
+	return nullptr;
 }
 
 

@@ -1,3 +1,0 @@
-b eagle 0 5
-a cow herbivore 2
-f salmon sea 6

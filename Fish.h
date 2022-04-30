@@ -8,7 +8,7 @@ class Fish : public Container
 {
 
 public:
-	int InData(std::ifstream &file);
+	int inData(std::ifstream &file);
 	Fish();
 	~Fish();
 	
@@ -16,11 +16,11 @@ public:
 	void setAreal(habitat inAreal);
 	
 	habitat getAreal();
-	int Out(std::ofstream &file);
+	int out(std::ofstream &file);
 	int nameSize();
-	int OutFish(std::ofstream &file);
-	int OutBird(std::ofstream &file);
-	int OutAnimal(std::ofstream &file);
+	int outFish(std::ofstream &file);
+	int outBird(std::ofstream &file);
+	int outAnimal(std::ofstream &file);
 private:
 	
 	habitat areal;

@@ -25,37 +25,55 @@ bool Bird::getMigratory()
 	return migratory;
 }
 
-int Bird::InData(std::ifstream & file)
+int Bird::inData(std::ifstream & file)
 {
 	file >> name;
-	if (file.bad())
+	if (file.fail())
+	{
 		return 1;
+	}
 	file >> migratory;
-	if (file.bad())
+	if (file.fail())
+	{
 		return 2;
+	}
 	file >> age;
-	if (file.bad())
+	if (file.fail())
+	{
 		return 3;
+	}
 	return 0;
 }
 
-int Bird::Out(std::ofstream & file)
+int Bird::out(std::ofstream & file)
 {
 	file << "name "<< name << " migratory ";
-	if (file.bad())
+	if (file.fail())
+	{
 		return 1;
-	if(migratory)		
-		file<< "true.";
-	else 
+	}
+	if (migratory)
+	{
+		file << "true.";
+	}
+	else
+	{
 		file << "false.";
-	if (file.bad())
+	}
+	if (file.fail())
+	{
 		return 2;
+	}
 	file << " age " << age << " name size ";
-	if (file.bad())
+	if (file.fail())
+	{
 		return 3;
+	}
 	file << nameSize() << "\n";
-	if (file.bad())
+	if (file.fail())
+	{
 		return 4;
+	}
 	return 0;
 }
 
@@ -65,17 +83,17 @@ int Bird::nameSize()
 	return name.length();
 }
 
-int Bird::OutBird(std::ofstream & file)
+int Bird::outBird(std::ofstream & file)
 {
-	return Out(file);
+	return out(file);
 }
 
-int Bird::OutFish(std::ofstream & file)
+int Bird::outFish(std::ofstream & file)
 {
 	return 4;
 }
 
-int Bird::OutAnimal(std::ofstream & file)
+int Bird::outAnimal(std::ofstream & file)
 {
 	return 4;
 }
